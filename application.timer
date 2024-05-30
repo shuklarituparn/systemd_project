@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for Web Service
+
+[Timer]
+OnUnitActiveSec=5m
+Unit=polling_script.service
+
+[Install]
+WantedBy=timers.target

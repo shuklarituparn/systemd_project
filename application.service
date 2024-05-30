@@ -1,0 +1,11 @@
+[Unit]
+Description=Web Application Service
+After=network.target
+
+[Service]
+Type=exec
+ExecStartPre=/bin/echo "Starting the Server"
+ExecStart=/sytemd_project/server/main
+ExecStartPost=/bin/echo "Started the Server"
+Restart=on-failure
+Environment=PORT=8888
